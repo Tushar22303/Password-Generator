@@ -29,9 +29,10 @@ function App() {
   }, [length, numAllowed, charAllowed, setPassword])
 
   const copyPassword = useCallback(() => {
-    passwordRef.current?.select()
+    passwordRef.current?.select();
     // passwordRef.current?.setSelectionRange(0,5)      // Select the Range of password from 0 to 5
     window.navigator.clipboard.writeText(password)
+    alert("Value Selected")
   }, [password])
 
   useEffect(() => {
